@@ -1,0 +1,12 @@
+diff -urN mobilizer-0.2.3.org/source/app/unix/Mobilizer.cpp mobilizer-0.2.3/source/app/unix/Mobilizer.cpp
+--- mobilizer-0.2.3.org/source/app/unix/Mobilizer.cpp	Tue Nov 19 02:04:02 2002
++++ mobilizer-0.2.3/source/app/unix/Mobilizer.cpp	Tue Nov 19 02:08:23 2002
+@@ -352,7 +352,7 @@
+   char *base_dir, *self_name;
+ 
+   base_dir = (char *) malloc(strlen(argv[0]) + 1);
+-  mg.gladeInterface = (char *) malloc(strlen(argv[0]) + strlen("mobilizer.glade") + 2);
++  mg.gladeInterface = "/usr/X11R6/share/mobilizer/mobilizer.glade";
+ 
+   if(base_dir == NULL || mg.gladeInterface == NULL) {
+ 
