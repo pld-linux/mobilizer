@@ -1,12 +1,39 @@
 diff -urN mobilizer-0.2.3.org/source/app/unix/Mobilizer.cpp mobilizer-0.2.3/source/app/unix/Mobilizer.cpp
 --- mobilizer-0.2.3.org/source/app/unix/Mobilizer.cpp	Tue Nov 19 02:04:02 2002
-+++ mobilizer-0.2.3/source/app/unix/Mobilizer.cpp	Tue Nov 19 02:08:23 2002
-@@ -352,7 +352,7 @@
-   char *base_dir, *self_name;
- 
-   base_dir = (char *) malloc(strlen(argv[0]) + 1);
++++ mobilizer-0.2.3/source/app/unix/Mobilizer.cpp	Tue Nov 19 02:17:59 2002
+@@ -349,34 +349,7 @@
+  * @param argv the argument vector.
+  */
+ void setupGlobals(int argc, char *argv[]) {
+-  char *base_dir, *self_name;
+-
+-  base_dir = (char *) malloc(strlen(argv[0]) + 1);
 -  mg.gladeInterface = (char *) malloc(strlen(argv[0]) + strlen("mobilizer.glade") + 2);
+-
+-  if(base_dir == NULL || mg.gladeInterface == NULL) {
+-
+-    g_warning("Not enough memory.");
+-    exit(1);
+-
+-  }
+-
+-  strcpy(base_dir, argv[0]);
+-
+-  self_name = strrchr(base_dir, '/');
+-  if(self_name == NULL) {
+-
+-    g_warning("Couldn't get base directory.\n");
+-    exit(1);
+-
+-  }
+-
+-  *self_name = '\0';
+-  self_name++;
+-
+-  strcpy(mg.gladeInterface, base_dir);
+-  strcat(mg.gladeInterface, "/");
+-  strcat(mg.gladeInterface, "mobilizer.glade");
 +  mg.gladeInterface = "/usr/X11R6/share/mobilizer/mobilizer.glade";
  
-   if(base_dir == NULL || mg.gladeInterface == NULL) {
- 
+   /* Initialize gnome. */
+   gnome_init("Mobilizer", VERSION, argc, argv);
