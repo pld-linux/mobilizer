@@ -1,4 +1,5 @@
 Summary:	A catchy.net initiative to deliver a full-featured WAP browser
+Summary(pl):	Inicjatywa catchy.net, by dostarczyæ przegl±darkê WAP o pe³nych mo¿liwo¶ciach
 Name:		mobilizer
 Version:	0.2.3
 Release:	1
@@ -8,11 +9,11 @@ Source0:	http://unc.dl.sourceforge.net/sourceforge/mobilizer/mobilizer-0.2.3.tar
 Patch0:		%{name}-glade.patch
 URL:		http://mobilizer.sourceforge.net/
 BuildRequires:	ORBit-devel >= 0.5.0
+BuildRequires:	doxygen
 BuildRequires:	gnome-core-devel >= 1.2.0
 BuildRequires:	gnome-libs-devel >= 1.2.0
 BuildRequires:	libglade-gnome-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	doxygen
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -21,6 +22,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A catchy.net initiative to deliver a full-featured WAP browser.
+
+%description -l pl
+Inicjatywa catchy.net, by dostarczyæ przegl±darkê WAP o pe³nych
+mo¿liwo¶ciach.
 
 %prep
 %setup -q
