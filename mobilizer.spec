@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://unc.dl.sourceforge.net/sourceforge/mobilizer/mobilizer-0.2.3.tar.gz
+# Source0-md5:	b621a0996c975a150afbe2488cb2a7fb
 Patch0:		%{name}-glade.patch
 URL:		http://mobilizer.sourceforge.net/
 BuildRequires:	ORBit-devel >= 0.5.0
