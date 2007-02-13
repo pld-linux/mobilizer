@@ -1,5 +1,5 @@
 Summary:	A catchy.net initiative to deliver a full-featured WAP browser
-Summary(pl.UTF-8):   Inicjatywa catchy.net, by dostarczyć przeglądarkę WAP o pełnych możliwościach
+Summary(pl.UTF-8):	Inicjatywa catchy.net, by dostarczyć przeglądarkę WAP o pełnych możliwościach
 Name:		mobilizer
 Version:	0.2.3
 Release:	1
